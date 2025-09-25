@@ -1,0 +1,24 @@
+.modeChange{
+    height: 2rem;
+    width: 2rem;
+    border-top:2px solid black ;
+    border-left:2px solid black ;
+    border-radius: 50%;
+}
+.modeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.one{
+    background-color: #116530;
+}
+.two{
+    background-color: #fcb5ac;
+}
+.three{
+    background-color: #8155ba;
+}
+.four{
+    background-color: #ba0f30;
+}
