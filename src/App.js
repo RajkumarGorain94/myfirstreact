@@ -46,7 +46,7 @@ function App() {
 
     return (
       <>
-      <Router>
+      <Router basename="/myfirstreact">
       <Navbar mode={mode} toggleMode={toggleMode} circleChange={handleBgColor}/>
       <Alert alert={alert}/>
       <div className="container my-3">
