@@ -35,7 +35,7 @@ let mystyle ={
           >
             <div className="accordion-body" style={mystyle}>
               <div className="developer">
-                <img src={`${process.env.PUBLIC_URL}/developer.jpg`} alt="Developer"></img>
+                <img src={`${process.env.PUBLIC_URL}/developerpic.jpg`} alt="Developer"></img>
                 <h3>RAJ KUMAR GORAIN</h3>
                 <h4>B.E. in CSE from U.I.T,B.U.</h4>
                 <p>Hi there,I am Raj Kumar Gorain from Purulia,West Bengal.I am
