@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
@@ -46,7 +46,7 @@ function App() {
 
     return (
       <>
-      <Router basename="/myfirstreact">
+      <HashRouter>
       <Navbar mode={mode} toggleMode={toggleMode} circleChange={handleBgColor}/>
       <Alert alert={alert}/>
       <div className="container my-3">
