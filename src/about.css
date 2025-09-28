@@ -1,0 +1,14 @@
+.developer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.developer img{
+    height: 20rem;
+}
+.developer h3{
+    margin-top: 1rem;
+}
+.developer p{
+    text-align: center;
+}

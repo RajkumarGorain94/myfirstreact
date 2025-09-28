@@ -1,29 +1,17 @@
 import React, { useState } from "react";
+import '../about.css';
 
-export default function About() {
-  const [mystyle, setMyStyle] = useState({
-  });
+export default function About(props) {
+  // const [mystyle, setMyStyle] = useState({
+  // });
+let mystyle ={
+  color: props.mode==='dark'?'white':'black',
+  backgroundColor : props.mode==='dark'?'rgb(36 74 104)':'white'
+}
 
-  const [btntext, setBtntext] = useState("Enable Dark Mode")
-
-  const toggleStyle = () => {
-    if (mystyle.color === "white") {
-      setMyStyle({
-        color: "black",
-        backgroundColor: "white",
-      });
-      setBtntext("Enable Dark Mode")
-    } else {
-      setMyStyle({
-        color: "white",
-        backgroundColor: "black",
-      });
-      setBtntext("Enable Light Mode")
-    }
-  };
 
   return (
-    <div className="container" style={mystyle}>
+    <div className="container" style={{color: props.mode==='dark'?'white':'black'}}>
       <h2>About Us</h2>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">
@@ -37,7 +25,7 @@ export default function About() {
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              Accordion Item #1
+              <strong>Developer</strong>
             </button>
           </h2>
           <div
@@ -46,14 +34,17 @@ export default function About() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={mystyle}>
-              <strong>This is the first item’s accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <div className="developer">
+                <img src="/developerpic.jpg"></img>
+                <h3>RAJ KUMAR GORAIN</h3>
+                <h4>B.E. in CSE from U.I.T,B.U.</h4>
+                <p>Hi there,I am Raj Kumar Gorain from Purulia,West Bengal.I am
+                  currently in 3<sup>rd</sup> year.I hope you like my site and
+                   make the most use of it.<br/>For more details and support, contact me<br/>
+                   <b>Email</b> :- 46rajkumar94@gmail.com
+                </p>
+                <p></p>
+              </div>
             </div>
           </div>
         </div>
@@ -68,7 +59,7 @@ export default function About() {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              Accordion Item #2
+              <strong>Functionalities</strong>
             </button>
           </h2>
           <div
@@ -77,14 +68,16 @@ export default function About() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={mystyle}>
-              <strong>This is the second item’s accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <p>You can perform lots of activities and transform your text into many ways.<br/>
+              You can convert your text to:
+              <ul>
+                <li>Uppercase</li>
+                <li>Lowercase</li>
+                <li>Copy</li>
+                <li>Remove extra spaces</li>
+              </ul>
+              If you want any other functionality to be added, please feel free to contact me.
+              </p>
             </div>
           </div>
         </div>
@@ -99,7 +92,7 @@ export default function About() {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              Accordion Item #3
+              <strong>Creation</strong>
             </button>
           </h2>
           <div
@@ -108,21 +101,13 @@ export default function About() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={mystyle}>
-              <strong>This is the third item’s accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <p>
+                The site is made using <u>React</u>. It is deployed using <u>Github Pages</u>.
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <button className="btn btn-primary my-1" onClick={toggleStyle}>
-        {btntext}
-      </button>
     </div>
   );
 }
