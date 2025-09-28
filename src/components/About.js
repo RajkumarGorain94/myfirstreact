@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import '../about.css';
 
 export default function About(props) {
@@ -35,7 +35,7 @@ let mystyle ={
           >
             <div className="accordion-body" style={mystyle}>
               <div className="developer">
-                <img src="/developerpic.jpg"></img>
+                <img src="/developerpic.jpg" alt="Developer"></img>
                 <h3>RAJ KUMAR GORAIN</h3>
                 <h4>B.E. in CSE from U.I.T,B.U.</h4>
                 <p>Hi there,I am Raj Kumar Gorain from Purulia,West Bengal.I am

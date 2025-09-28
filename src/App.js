@@ -46,7 +46,7 @@ function App() {
 
     return (
       <>
-      <HashRouter>
+      <Router>
       <Navbar mode={mode} toggleMode={toggleMode} circleChange={handleBgColor}/>
       <Alert alert={alert}/>
       <div className="container my-3">
