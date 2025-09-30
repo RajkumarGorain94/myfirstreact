@@ -33,7 +33,7 @@ export default function TextForm(props) {
     text.select();
     navigator.clipboard.writeText(text.value);
     document.getSelection().removeAllRanges();
-    props.showAlert("Text Copied","success");
+    props.showAlert("Copied to Clipboard","success");
   }
 
   const handleExtraSpaces=()=>{
